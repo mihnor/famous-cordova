@@ -6,11 +6,118 @@
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="stylesheet" type="text/css" href="css/device.css" />
+
+        <!-- shims for backwards compatibility -->
+        <script type="text/javascript" src="http://code.famo.us/lib/functionPrototypeBind.js"></script>
+        <script type="text/javascript" src="http://code.famo.us/lib/classList.js"></script>
+        <script type="text/javascript" src="http://code.famo.us/lib/requestAnimationFrame.js"></script>
+
+        <!-- module loader -->
+        <script type="text/javascript" src="http://code.famo.us/lib/require.js"></script>
+
+        <!-- famous -->
+        <link rel="stylesheet" type="text/css" href="http://code.famo.us/famous/0.2.0/famous.css" />
+        <script type="text/javascript" src="http://code.famo.us/famous/0.2.0/famous.min.js"></script>
+
+        <!-- app code -->
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+        <script type="text/javascript">
+            var ultraVisualData = {
+                "Featured": [
+                    {
+                        "title": "<strong>Pequenos Reparos</strong>",
+                        "paragraph": "Omar Salomão",
+                        "img": "assets/omar.png",
+                        "id" : "0",
+                        "name": "omar",
+                        "url": "public/omar/index.html"
+                    },
+                    {
+                        "title": "<strong>Tudo muda o tempo todo</strong>",
+                        "paragraph": "Ricardo Aleixo",
+                        "img": "assets/aleixo.png",
+                        "id" : "1",
+                        "name": "aleixo",
+                        "url": "public/aleixo/index.html"
+                    },
+                    {
+                        "title": "<strong>Antes que um pensamento se...</strong>",
+                        "paragraph": "Laura Erber",
+                        "img": "assets/erber.png",
+                        "id" : "2",
+                        "name": "erber",
+                        "url": "public/erber/index.html"
+                    },
+                    {
+                        "title": "<strong>100 poesias de </strong>dois",
+                        "paragraph": "Michel Melamed",
+                        "img": "assets/melamed.png",
+                        "id" : "3",
+                        "name": "melamed",
+                        "url": "public/melamed/index.html"
+                    },
+                    {
+                        "title": "<strong>Planta-Peixe-Pássaro</strong>",
+                        "paragraph": "Bruna Beber",
+                        "img": "assets/beber.png",
+                        "id" : "4",
+                        "name": "beber",
+                        "url": "public/beber/index.html"
+                    },
+                    {
+                        "title": "<strong>Palavrio</strong>",
+                        "paragraph": "André Vallias",
+                        "img": "assets/vallias.png",
+                        "id" : "5",
+                        "name": "vallias",
+                        "url": "public/vallias/index.html"
+                    },
+                    {
+                        "title": "<strong>Rabo de Baleia</strong>",
+                        "paragraph": "Alice Sant'Anna",
+                        "img": "assets/alice.png",
+                        "id" : "6",
+                        "name": "alice",
+                        "url": "public/alice/index.html"
+                    },
+                    {
+                        "title": "<strong>Elenco</strong>",
+                        "paragraph": "",
+                        "img": "assets/elenco.png",
+                        "id" : "7",
+                        "name": "equipe",
+                        "url": "public/elenco/index.html"
+                    },
+                    {
+                        "title": "<strong>Sobre o POESIA</strong>",
+                        "paragraph": "",
+                        "img": "assets/poesia.png",
+                        "id" : "8",
+                        "name": "sobre",
+                        "url": "public/sobre/index.html"
+                    }
+                ]
+            };
+            require.config({
+                baseUrl: './src/'
+            });
+            require(['main']);
+        </script>
     </head>
     <body>
-        <div class="device">
-            <iframe class="iframe" src="app.html"></iframe>
+        <div id="list-wrapper">
+
+        </div>
+
+        <div id="menu-wrapper">
+            <div id="menu-bg"></div>
+            <div id="menu-button">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+            <div class="text">Following</div>
         </div>
     </body>
 </html>
