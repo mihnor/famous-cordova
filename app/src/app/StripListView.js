@@ -83,9 +83,10 @@ define(function(require, exports, module) {
 		this.textMod = new Modifier();
 
 		this.textSurf = new Surface({
-			size: [this.options.width, this.options.height],
+			size: [this.options.width *.61, this.options.height/8],
 			properties: {
-				webkitTransformOrigin: "50% 0"
+				webkitTransformOrigin: "50% 0",
+                backgroundColor: "rgba(250,92,79,0.7)"
 			},
 			content: '<div class="title">' + this.options.title + '</div>'
 		});
@@ -94,7 +95,7 @@ define(function(require, exports, module) {
 		this.paragraphMod = new Modifier();
 
 		this.paragraphSurf = new Surface({
-			size: [this.options.width, this.options.height],
+			size: [this.options.width, this.options.height/10],
 			properties: {
 				webkitTransformOrigin: "50% 0"
 			},
@@ -147,7 +148,7 @@ define(function(require, exports, module) {
 		if(y < 100) {
 			var scaleOffset = y / 100;
 			var textOffsetY = (this.options.height * (70 - y) * .01);
-			var fontSize = ((y / 2) + 16);
+			var fontSize = ((y / 5) + 16);
 
 			if(y > 0 && y < 60) {
 				scaleOffset = 1 + (y / 100);
@@ -161,16 +162,16 @@ define(function(require, exports, module) {
 
 			if(y > 1) {
 				this.paragraphMod.setTransform(
-					Transform.translate(0, textOffsetY + 50, 0)
+					Transform.translate(0, textOffsetY + 10, 0)
 				);
 			}else {
 				this.paragraphMod.setTransform(
-					Transform.translate(0, this.options.height, 0)
+					Transform.translate(0, this.options.height/4, 0)
 				);
 			}
 
 			this.textSurf.setProperties({
-				fontSize: ((y / 2) + 16) + 'px'
+				fontSize: ((y / 5) + 16) + 'px'
 			});
 		}
 	};

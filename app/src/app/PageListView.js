@@ -35,8 +35,8 @@ define(function(require, exports, module) {
 //            topOffset: 150,
 //			listData: null
         stripWidth: 768,
-        stripHeight: 640,
-        topOffset: 400,
+        stripHeight: 200,
+        topOffset: 150,
         listData: null
         };
 

@@ -5,7 +5,7 @@ Ultravisual scroll zoom like http://capptivate.co/2014/01/10/ultra-visual/
 
 Files
 =============
-1. ListView.js
+1. ListViewUltra.js
 2. PageListView.js
 3. StripListView.js
  

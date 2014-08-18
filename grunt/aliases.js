@@ -14,18 +14,18 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
-    'clean:dist',
-    'lint',
-    'processhtml:dist',
-    'useminPrepare',
+//    'clean:dist',
+//    'lint',
+//    'processhtml:dist',
+//    'useminPrepare',
     'requirejs',
-    'concat',
-    'cssmin',
-    'uglify',
+//    'concat',
+//    'cssmin',
+//    'uglify',
     'copy:dist',
-    'rev',
-    'usemin',
-    'htmlmin'
+//    'rev',
+//    'usemin',
+//    'htmlmin'
   ]);
 
   grunt.registerTask('lint', [

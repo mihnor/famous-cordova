@@ -1,6 +1,6 @@
 define(function(require, exports, module) {
         var Engine = require('famous/core/Engine');
-        var ListView  = require('app/ListView');
+        var ListView  = require('app/ListViewUltra');
 
         var mainContext = Engine.createContext();
 
