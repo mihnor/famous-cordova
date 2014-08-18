@@ -12,3 +12,13 @@ use complete view on iOs
     }
     [super viewWillAppear:animated];
 }
+
+
+github
+
+eval "$(ssh-agent -s)";
+ssh-add ~/.ssh/github2_rsa
+ssh-add -l
+ssh -T git@github.com
+ssh -T mihnor@github.com
+ssh -vT git@github.com

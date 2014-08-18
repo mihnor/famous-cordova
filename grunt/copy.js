@@ -13,7 +13,8 @@ module.exports = {
         // '{,*/}*.html',
         'styles/fonts/{,*/}*.*',
           'img/{,*/}*.*',
-          'css/{,*/}*.*'
+          'css/{,*/}*.*',
+          'assets/{,*/}*.*'
 
       ]
     }]

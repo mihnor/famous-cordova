@@ -1,15 +1,10 @@
 define(function(require, exports, module) {
-	var Engine = require('famous/core/Engine');
-	var AppView = require('views/AppView');
+        var Engine = require('famous/core/Engine');
+        var ListView  = require('app/ListView');
 
-	var mainContext = Engine.createContext();
+        var mainContext = Engine.createContext();
 
-	var appView = new AppView();
+        var listView = new ListView({listData: ultraVisualData.Featured});
 
-	var test = navigator.userAgent.toLowerCase();
-	if (test.indexOf("android") > -1) {
-		mainContext.setPerspective(1000);
-	}
-
-	mainContext.add(appView);
+        mainContext.add(listView);
 });
